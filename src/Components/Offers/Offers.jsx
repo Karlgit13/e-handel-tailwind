@@ -10,8 +10,8 @@ const Offers = () => {
 
   return (
     <div className="flex justify-center my-5">
-      <div className="flex justify-evenly place-items-center max-w-7xl w-full offersBG md:rounded-md px-2">
-        <div className="">
+      <div className="flex justify-evenly place-items-center max-w-7xl w-full offersBG md:rounded-md py-2 px-2">
+        <div className=" text-lg md:text-4xl">
           <h1>Exclusive</h1>
           <h1>Offers For You</h1>
           <p>ONLY ON BEST SELLERS PRODUCTS</p>

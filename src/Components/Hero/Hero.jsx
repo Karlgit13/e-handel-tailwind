@@ -12,14 +12,14 @@ const Hero = () => {
 
   return (
     <div className="heroBG flex justify-around p-1 py-12 place-items-center">
-      <div className="">
+      <div className="text-xl md:text-5xl">
         <div>
-          <img className="w-6" src={hand_icon} alt="handIcon" />
+          <img className="w-6 md:w-20" src={hand_icon} alt="handIcon" />
         </div>
         <p>new</p>
         <p>collections</p>
         <p>for everyone</p>
-        <button className="red-button mt-3" onClick={scrollThingy}>
+        <button className="red-button mt-3 md:w-full" onClick={scrollThingy}>
           <div>Latest</div>
           <img className="w-4" src={arrow_icon} alt="arrowIcon" />
         </button>

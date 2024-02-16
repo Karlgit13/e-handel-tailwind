@@ -27,7 +27,7 @@ html {
   gap: 0.75rem; /* gap-3 (baserat på standardkonfigurationen) */
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0.5rem; /* p-2 */
   align-items: center;
   border-radius: 0.5rem; /* rounded-lg */
