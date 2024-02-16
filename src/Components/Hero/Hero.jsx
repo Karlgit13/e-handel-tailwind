@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="heroBG flex justify-around p-1 py-12">
+    <div className="heroBG flex justify-around p-1 py-12 place-items-center">
       <div className="">
         <div>
           <img className="w-6" src={hand_icon} alt="handIcon" />
@@ -19,13 +19,13 @@ const Hero = () => {
         <p>new</p>
         <p>collections</p>
         <p>for everyone</p>
-        <button className="red-button" onClick={scrollThingy}>
+        <button className="red-button mt-3" onClick={scrollThingy}>
           <div>Latest</div>
-          <img className="w-6" src={arrow_icon} alt="arrowIcon" />
+          <img className="w-4" src={arrow_icon} alt="arrowIcon" />
         </button>
       </div>
       <div className="">
-        <img className="w-32" src={hero_image} alt="heroImage" />
+        <img className="w-32 md:w-64" src={hero_image} alt="heroImage" />
       </div>
     </div>
   );

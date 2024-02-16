@@ -32,3 +32,12 @@ html {
   align-items: center;
   border-radius: 0.5rem; /* rounded-lg */
 }
+
+.offersBG {
+  background-image: linear-gradient(
+      0deg,
+      rgba(4, 223, 34, 0.15) 0%,
+      rgba(167, 179, 214, 0.15) 100%
+    ),
+    linear-gradient(90deg, rgb(210, 94, 235), rgb(219, 158, 203));
+}
