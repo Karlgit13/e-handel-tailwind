@@ -10,17 +10,23 @@ const Offers = () => {
 
   return (
     <div className="flex justify-center my-5">
-    <div className="flex justify-evenly place-items-center max-w-7xl w-full offersBG md:rounded-md px-2">
-      <div className="">
-        <h1>Exclusive</h1>
-        <h1>Offers For You</h1>
-        <p>ONLY ON BEST SELLERS PRODUCTS</p>
-        <button className="red-button mt-2" onClick={scrolly}>Check Now</button>
+      <div className="flex justify-evenly place-items-center max-w-7xl w-full offersBG md:rounded-md px-2">
+        <div className="">
+          <h1>Exclusive</h1>
+          <h1>Offers For You</h1>
+          <p>ONLY ON BEST SELLERS PRODUCTS</p>
+          <button className="red-button mt-2" onClick={scrolly}>
+            Check Now
+          </button>
+        </div>
+        <div className="">
+          <img
+            className="w-32 md:w-64"
+            src={exclusive_image}
+            alt="exclusiveImage"
+          />
+        </div>
       </div>
-      <div className="">
-        <img className="w-32 md:w-64" src={exclusive_image} alt="exclusiveImage" />
-      </div>
-    </div>
     </div>
   );
 };
