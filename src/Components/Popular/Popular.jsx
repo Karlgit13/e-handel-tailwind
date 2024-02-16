@@ -5,10 +5,10 @@ import Item from "../Item/Item";
 
 const Popular = () => {
   return (
-    <div className="popular">
-      <h1>POPULAR IN WOMEN</h1>
+    <div className="flex flex-col place-items-center">
+      <h1 className="text-center p-3">POPULAR IN WOMEN</h1>
       <hr />
-      <div className="popular-item">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-1 max-w-7xl">
         {data_product.map((item, i) => {
           return (
             <Item

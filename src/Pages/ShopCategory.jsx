@@ -44,9 +44,9 @@ const ShopCategory = (props) => {
   }, [all_product, props.category]);
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full place-items-center">
       <img className="w-full" src={props.banner} alt="banner" />
-      <div className="flex justify-between p-1 bg-white pb-4 pt-4">
+      <div className="flex justify-between p-1 bg-white pb-4 pt-4 w-full max-w-7xl">
         <p>
           <span>Showing 1-12</span> out of 36 products
         </p>
@@ -81,7 +81,7 @@ const ShopCategory = (props) => {
           )}
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-3 md:grid-cols-4">
+      <div className="grid grid-cols-3 gap-3 md:grid-cols-4 max-w-7xl">
         {sortedProducts.map((item, i) => (
           <Item
             key={i}
