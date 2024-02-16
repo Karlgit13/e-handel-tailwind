@@ -5,8 +5,8 @@ import Item from "../Item/Item";
 
 const NewCollections = () => {
   return (
-    <div className="flex flex-col place-items-center">
-      <h1 className="text-center p-3">NEW COLLECTIONS</h1>
+    <div className="flex flex-col place-items-center new-collections ">
+      <h1 className="text-center p-3 text-lg md:text-3xl">NEW COLLECTIONS</h1>
       <hr />
       <div className="grid grid-cols-2 md:grid-cols-4 max-w-7xl gap-1">
         {new_collection.map((item, i) => {

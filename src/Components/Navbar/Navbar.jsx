@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-row w-screen justify-between bg-white text-black">
+    <div className="flex flex-row w-screen justify-between bg-white text-black text-lg md:text-3xl">
       <div className="p-1">
         <Link to="/">
           <img className="w-7" src={logo} alt="logo" />

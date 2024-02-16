@@ -7,32 +7,31 @@ import whatsapp_icon from "../../Assets/whatsapp_icon.png";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="footer-logo">
-        <img src={footer_logo} alt="footerLogo" />
-        <p>SHOPPER</p>
+    <div className="w-full grid grid-cols-3 place-items-center">
+      <div className="flex">
+        <img className="w-12 md:w-auto" src={footer_logo} alt="footerLogo" />
+        <p className="text-xs md:text-2xl">SHOPPER</p>
       </div>
-      <ul className="footer-links">
+      <ul>
         <li>Company</li>
         <li>Products</li>
         <li>Offices</li>
         <li>About</li>
         <li>Contact</li>
       </ul>
-      <div className="footer-social-icon">
-        <div className="footer-icons-container">
+      <div className="">
+        <div>
           <img src={instagram_icon} alt="instaIcon" />
         </div>
-        <div className="footer-icons-container">
+        <div className="">
           <img src={pintester_icon} alt="pintesterIcon" />
         </div>
-        <div className="footer-icons-container">
+        <div className="">
           <img src={whatsapp_icon} alt="whatsappIcon" />
         </div>
       </div>
-      <div className="footer-copyright">
-        <hr />
-        <p>Copyright @ 2024 - All Rights Reserved.</p>
+      <div className="col-span-3 mt-3">
+        <p className="text-center">Copyright @ 2024 - All Rights Reserved.</p>
       </div>
     </div>
   );
