@@ -7,6 +7,7 @@ import whatsapp_icon from "../../Assets/whatsapp_icon.png";
 
 const Footer = () => {
   return (
+    <div className="w-full flex justify-center heroBG py-5 md:py-10">
     <div className="w-full grid grid-cols-3 place-items-center">
       <div className="flex">
         <img className="w-12 md:w-auto" src={footer_logo} alt="footerLogo" />
@@ -33,6 +34,7 @@ const Footer = () => {
       <div className="col-span-3 mt-3">
         <p className="text-center">Copyright @ 2024 - All Rights Reserved.</p>
       </div>
+    </div>
     </div>
   );
 };
