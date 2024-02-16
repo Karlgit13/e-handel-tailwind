@@ -5,30 +5,27 @@ import arrow_icon from "../../Assets/arrow.png";
 import hero_image from "../../Assets/hero_image.png";
 
 const Hero = () => {
-
   const scrollThingy = () => {
     const newCollectionsDiv = document.querySelector(".new-collections");
-    newCollectionsDiv.scrollIntoView({behavior: "smooth"})
-  }
+    newCollectionsDiv.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <div className="hero">
-      <div className="hero-left">
+    <div className="heroBG flex justify-around p-1 py-12">
+      <div className="">
         <div>
-          <div className="hand-hand-icon">
-            <img className="handImg" src={hand_icon} alt="handIcon" />
-          </div>
-          <p>new</p>
-          <p>collections</p>
-          <p>for everyone</p>
+          <img className="w-6" src={hand_icon} alt="handIcon" />
         </div>
-        <button onClick={scrollThingy} className="hero-latest-btn">
+        <p>new</p>
+        <p>collections</p>
+        <p>for everyone</p>
+        <button className="red-button" onClick={scrollThingy}>
           <div>Latest</div>
-          <img src={arrow_icon} alt="arrowIcon" />
+          <img className="w-6" src={arrow_icon} alt="arrowIcon" />
         </button>
       </div>
-      <div className="hero-right">
-        <img className="heroImg" src={hero_image} alt="heroImage" />
+      <div className="">
+        <img className="w-32" src={hero_image} alt="heroImage" />
       </div>
     </div>
   );

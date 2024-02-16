@@ -44,25 +44,44 @@ const ShopCategory = (props) => {
   }, [all_product, props.category]);
 
   return (
-    <div className="shop-category">
-      <img className="shop-category-banner" src={props.banner} alt="banner" />
-      <div className="shopcategory-indexSort">
+    <div className="flex flex-col w-full">
+      <img className="w-full" src={props.banner} alt="banner" />
+      <div className="flex justify-between p-1 bg-white pb-4 pt-4">
         <p>
           <span>Showing 1-12</span> out of 36 products
         </p>
-        <div onClick={toggleSort} className="shopcategory-sort">
+        <div className="flex relative cursor-pointer" onClick={toggleSort}>
           {currentSortOption ? `${currentSortOption}` : "Sort by "}
-          <img className="dropdownIcon" src={dropdown_icon} alt="sort icon" />
+          <img
+            className="w-3 h-2 mt-2 ml-2 "
+            src={dropdown_icon}
+            alt="sort icon"
+          />
           {isOpen && (
-            <div className="dropdown-div">
-              <button onClick={sortFakeMostPopular}>Most Popular</button>
-              <button onClick={sortLowestPrices}>Lowest Price</button>
-              <button onClick={sortHighestPrices}>Highest Price</button>
+            <div className="flex flex-col absolute bg-white top-6 md:top-8 -right-1 p-1 w-28 md:w-40 gap-1">
+              <button
+                className="bg-blue-400 p-1 rounded-md"
+                onClick={sortFakeMostPopular}
+              >
+                Most Popular
+              </button>
+              <button
+                className="bg-blue-400 p-1 rounded-md"
+                onClick={sortLowestPrices}
+              >
+                Lowest Price
+              </button>
+              <button
+                className="bg-blue-400 p-1 rounded-md"
+                onClick={sortHighestPrices}
+              >
+                Highest Price
+              </button>
             </div>
           )}
         </div>
       </div>
-      <div className="shopcategory-products">
+      <div className="grid grid-cols-3 gap-3 md:grid-cols-4">
         {sortedProducts.map((item, i) => (
           <Item
             key={i}
@@ -74,7 +93,7 @@ const ShopCategory = (props) => {
           />
         ))}
       </div>
-      <div className="shopcategory-loadmore">Explore more</div>
+      {/* <div>Explore more</div> */}
     </div>
   );
 };

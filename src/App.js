@@ -12,7 +12,7 @@ import kids_banner from "./Assets/banner_kids.png"
 
 function App() {
   return (
-    <div>
+    <div className=' md:text-2xl'>
       <BrowserRouter>
         <Navbar />
         <Routes>
