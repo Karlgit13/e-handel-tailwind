@@ -7,13 +7,13 @@ import whatsapp_icon from "../../Assets/whatsapp_icon.png";
 
 const Footer = () => {
   return (
-    <div className="w-full flex justify-center heroBG py-2 md:py-4 mt-7 md:mt-14">
+    <div className="w-full flex justify-center heroBG py-2 md:py-4 mt-7 md:mt-14 ">
       <div className="w-full grid grid-cols-3 place-items-center">
         <div className="flex">
           <img className="w-12 md:w-auto" src={footer_logo} alt="footerLogo" />
           <p className="text-xs md:text-2xl">SHOPPER</p>
         </div>
-        <ul>
+        <ul className="md:grid grid-cols-5 md:place-items-center md:gap-10">
           <li>Company</li>
           <li>Products</li>
           <li>Offices</li>

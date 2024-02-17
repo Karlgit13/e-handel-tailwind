@@ -4,10 +4,11 @@ import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../../Assets/cart_cross_icon.png";
 
 const CartItems = () => {
-  const { all_product, cartItems, removeFromCart, getTotalCartAmount } = useContext(ShopContext);
+  const { all_product, cartItems, removeFromCart, getTotalCartAmount } =
+    useContext(ShopContext);
   return (
-    <div className="cartitems">
-      <div className="cartitems-format-main">
+    <div className="flex flex-col w-full text-lg md:text-2xl md:py-10 py-5">
+      <div className="grid grid-cols-6 place-items-center p-2 font-bold">
         <p>Products</p>
         <p>Title</p>
         <p>Price</p>
@@ -19,17 +20,18 @@ const CartItems = () => {
       {all_product.map((e) => {
         if (cartItems[e.id] > 0) {
           return (
-            <div>
-              <div className="cartitems-format cartitems-format-main">
-                <img src={e.image} alt="" className="carticon-product-icon" />
-                <p>{e.name}</p>
+            <div className="flex w-full">
+              <div className="grid grid-cols-6 place-items-center p-2">
+                <img
+                  className=" w-10 md:w-20 rounded-sm"
+                  src={e.image}
+                  alt=""
+                />
+                <p className=" line-clamp-2">{e.name}</p>
                 <p>${e.new_price}</p>
-                <button className="cartitems-quantity">
-                  {cartItems[e.id]}
-                </button>
+                <button>{cartItems[e.id]}</button>
                 <p>${e.new_price * cartItems[e.id]}</p>
                 <img
-                  className="cartitems-remove-icon"
                   src={remove_icon}
                   onClick={() => {
                     removeFromCart(e.id);
@@ -42,32 +44,38 @@ const CartItems = () => {
         }
         return null;
       })}
-      <div className="cartitems-down">
-        <div className="cartitems-total">
-          <h1>Cart Totals</h1>
+      <div className="flex flex-col p-2 mt-10 md:mt-56 md:flex-row md:place-items-center md:justify-evenly w-full text-lg md:text-2xl">
+        <div>
+          <h1 className=" font-bold">Cart Totals</h1>
           <div>
-            <div className="cartitems-total-item">
+            <div className="flex justify-between">
               <p>Subtotal</p>
-              <p>${getTotalCartAmount()}</p>
+              <p className="font-bold">${getTotalCartAmount()}</p>
             </div>
             <hr />
-            <div className="cartitems-total-item">
+            <div className="flex justify-between">
               <p>Shipping Fee</p>
-              <p>Free</p>
+              <p className="font-bold">Free</p>
             </div>
             <hr />
-            <div className="cartitems-total-item">
+            <div className="flex justify-between">
               <h3>Total</h3>
-              <h3>${getTotalCartAmount()}</h3>
+              <h3 className="font-bold">${getTotalCartAmount()}</h3>
             </div>
           </div>
-          <button>PROCEES TO CHECKOUT</button>
+          <button className="bg-red-400 p-2 rounded-sm w-full mt-2">
+            PROCEED TO CHECKOUT
+          </button>
         </div>
-        <div className="cartitems-promocode">
+        <div className="mt-12">
           <p>If you have a promo code, Enter it here</p>
-          <div className="cartitems-promobox">
-            <input type="text" placeholder="promo code" />
-            <button>Submit</button>
+          <div className="flex flex-row">
+            <input
+              className="border p-2"
+              type="text"
+              placeholder="promo code"
+            />
+            <button className="bg-red-400 p-2 rounded-sm">Submit</button>
           </div>
         </div>
       </div>
