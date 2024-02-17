@@ -71,10 +71,10 @@ const ProductDisplay = (props) => {
         >
           ADD TO CART
         </button>
-        <p className="text-sm">
+        <p className="text-sm md:text-base">
           <span>Category :</span>Women, T-Shirt, Crop Top
         </p>
-        <p className="text-sm -mt-3">
+        <p className="text-sm md:text-base -mt-3">
           <span>Tags :</span>Modern, Latest
         </p>
       </div>

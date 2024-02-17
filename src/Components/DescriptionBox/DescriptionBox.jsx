@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const DescriptionBox = () => {
   const [toggleDiv, setToggleDiv] = useState(false);
 
@@ -9,28 +8,28 @@ const DescriptionBox = () => {
   };
 
   return (
-    <div className="descriptionbox">
-      <div className="descriptionbox-navigator">
+    <div className="flex flex-col md:place-items-center mt-5 md:mt-10">
+      <div className="flex flex-row">
         <div
           onClick={handleDiv}
-          className={`descriptionbox-nav-box ${toggleDiv ? "" : "fade"}`}
+          className={`border cursor-pointer p-4 ${toggleDiv ? "" : "fade"}`}
         >
           Description
         </div>
         <div
           onClick={() => setToggleDiv(false)}
-          className={`descriptionbox-nav-box ${!toggleDiv ? "" : "fade"}`}
+          className={`border cursor-pointer p-4 ${toggleDiv ? "" : "fade"}`}
         >
           Reviews (0)
         </div>
       </div>
       {toggleDiv ? (
-        <div className="descriptionbox-description">
+        <div className="p-4">
           <p>Description...</p>
           <p>More description...</p>
         </div>
       ) : (
-        <div className="descriptionbox-description">
+        <div className="p-4">
           <p>Reviews...</p>
           <p>More reviews...</p>
         </div>
