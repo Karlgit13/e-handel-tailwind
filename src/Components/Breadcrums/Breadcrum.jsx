@@ -19,7 +19,7 @@ const Breadcrum = (props) => {
   };
 
   return (
-    <div className="breadcrum">
+    <div className="flex">
       <Link to={"/"}>Home</Link> <img src={arrow_icon} alt="arrowIcon" />{" "}
       <Link to={"/"}>Shop</Link> <img src={arrow_icon} alt="arrowIcon" />{" "}
       <Link to={getCategoryPath(product.category)}>{product.category}</Link>{" "}
